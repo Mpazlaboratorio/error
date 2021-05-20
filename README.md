@@ -26,9 +26,9 @@ Para desplegar los ficheros de ejemplo, clona este repositorio, entra dentro del
 ### Comprueba que los pods están corriendo:
 
     kubectl get po
-    NAME                      READY   STATUS        RESTARTS   AGE
-    apache-6fb77f6c95-2mmt6   1/1     **Running**   0          44s
-    nginx-589746f7b9-5c89c    1/1     **Running**   0          44s
+    NAME                      READY   STATUS    RESTARTS   AGE
+    apache-6fb77f6c95-2mmt6   1/1     Running   0          44s
+    nginx-589746f7b9-5c89c    1/1     Running   0          44s
 
 ### Accede al servicio nginx
 
@@ -69,6 +69,10 @@ Aquí puedes acceder desde el navegador o curl. Refresca el navegador varias vec
     </body>
     </html>
 
-Verás que algunas veces responde nginx y otras apache.
+Verás que algunas veces responde `nginx` y otras `apache`.
 
-Tu objetivo es encontrar el por qué no es `nginx` el único que responde. Como requisito, `nginx` y `apache` **deben** estar corriendo. 
+Tus objetivos son:
+
+1. Explicar el por qué no es `nginx` el único que responde. 
+
+2. Proponer una solución al problema (`nginx` y `apache` **deben** estar corriendo, pero se pide que cuando accedamos al servicio de `nginx` **sólo** responda éste y no `apache`).
